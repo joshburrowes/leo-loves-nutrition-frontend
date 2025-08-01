@@ -1,103 +1,172 @@
+"use client";
+import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div
+      className="site-wrapper"
+      style={{ background: "var(--background)", padding: 0 }}
+    >
+      {/* Hero Section */}
+      <section
+        className="hero-section"
+        style={{
+          position: "relative",
+          width: "100vw",
+          maxWidth: "100vw",
+          left: 0,
+          marginLeft: 0,
+          marginRight: 0,
+          height: "350px",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          className="hero-overlay"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(255,240,245,0.6)",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h1
+            className="hero-title"
+            style={{
+              color: "#a8005b",
+              fontSize: "2.8rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+              textShadow: "0 2px 8px #fff",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Leo Loves Nutrition
+          </h1>
+          <p
+            className="hero-text"
+            style={{
+              color: "#d72660",
+              fontSize: "1.3rem",
+              maxWidth: "600px",
+              textAlign: "center",
+              textShadow: "0 2px 8px #fff",
+            }}
           >
-            Read our docs
-          </a>
+            Nutrition is the foundation of a vibrant life. Leo Loves Nutrition
+            is dedicated to helping you discover the joy of healthy eating, with
+            personalized plans and expert guidance for every step of your
+            journey.
+          </p>
+          <button
+            onClick={() => {
+              const el = document.getElementById("intro-section");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            style={{
+              marginTop: "2rem",
+              background: "linear-gradient(90deg, #ff69b4 0%, #d72660 100%)",
+              color: "#fff",
+              fontWeight: 600,
+              fontSize: "1.1rem",
+              padding: "0.85rem 2.2rem",
+              borderRadius: "999px",
+              boxShadow: "0 2px 12px 0 rgba(168,0,91,0.12)",
+              border: "none",
+              cursor: "pointer",
+              transition: "background 0.2s",
+            }}
+            className="hero-scroll-btn"
+          >
+            Learn More
+          </button>
         </div>
+      </section>
+
+      <header className="site-header">
+        <p className="site-subtitle">
+          Empowering you to live your healthiest life
+        </p>
+      </header>
+
+      <main className="site-main">
+        <section id="intro-section" className="intro-section">
+          <h2 className="section-title">Meet Leo</h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
+            <div
+              style={{
+                width: 180,
+                height: 180,
+                borderRadius: "50%",
+                overflow: "hidden",
+                boxShadow: "0 2px 8px #d72660",
+              }}
+            >
+              <Image
+                src="/leo-loves-nutrition-image.png"
+                alt="Leo, female nutritionist"
+                width={180}
+                height={180}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                }}
+              />
+            </div>
+            <p className="section-text">
+              Leo is a certified nutritionist passionate about helping you
+              achieve your wellness goals. Whether you want to lose weight, gain
+              energy, or simply eat better, Leo offers personalized nutrition
+              plans and ongoing support.
+            </p>
+          </div>
+        </section>
+
+        <section className="services-section">
+          <div className="service-card">
+            <h3 className="service-title">Personalized Plans</h3>
+            <p className="service-text">
+              Custom nutrition strategies tailored to your lifestyle and goals.
+            </p>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">1-on-1 Coaching</h3>
+            <p className="service-text">
+              Direct support and accountability from Leo every step of the way.
+            </p>
+          </div>
+          <div className="service-card">
+            <h3 className="service-title">Workshops & Resources</h3>
+            <p className="service-text">
+              Group sessions, recipes, and guides to keep you inspired.
+            </p>
+          </div>
+        </section>
+
+        <section className="cta-section">
+          <Link href="/contact" className="cta-button">
+            Book a Free Consultation
+          </Link>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="mt-16" />
+      <Footer />
     </div>
   );
 }
