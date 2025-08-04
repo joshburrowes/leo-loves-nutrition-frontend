@@ -3,19 +3,30 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="w-full bg-pink-100/80 backdrop-blur-md shadow-sm py-4 px-8 flex justify-between items-center sticky top-0 z-50">
-      <h1 className="text-pink-900 font-extrabold text-3xl font-sans">
+      <Link
+        href="/"
+        className="text-pink-900 font-extrabold text-3xl font-sans hover:text-pink-700 transition duration-200"
+      >
         Leo Loves Nutrition{" "}
         <span className="text-pink-700" aria-hidden="true">
           💗
         </span>
-      </h1>
+      </Link>
       <ul className="flex gap-8 text-pink-700 font-semibold text-lg">
         <li>
           <Link
-            href="/"
+            href="/services"
             className="hover:text-pink-900 transition duration-200"
           >
-            Home
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/blog"
+            className="hover:text-pink-900 transition duration-200"
+          >
+            Blog
           </Link>
         </li>
         <li>
@@ -28,26 +39,10 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="/services"
-            className="hover:text-pink-900 transition duration-200"
-          >
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/contact"
             className="hover:text-pink-900 transition duration-200"
           >
             Contact
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/blog"
-            className="hover:text-pink-900 transition duration-200"
-          >
-            Blog
           </Link>
         </li>
       </ul>

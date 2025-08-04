@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -25,6 +26,12 @@ export default function Services() {
               Custom meal plans tailored to your unique needs, preferences, and
               goals.
             </p>
+            <Link
+              href="/services/personalized-nutrition-plans"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
             <img
@@ -39,6 +46,12 @@ export default function Services() {
               Ongoing support, motivation, and accountability from Leo every
               step of the way.
             </p>
+            <Link
+              href="/services/1-on-1-coaching"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
             <img
@@ -53,6 +66,12 @@ export default function Services() {
               Interactive group sessions covering nutrition, wellness, and
               healthy habits.
             </p>
+            <Link
+              href="/services/workshops-seminars"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
             <img
@@ -66,6 +85,12 @@ export default function Services() {
             <p className="text-pink-800 text-center">
               Guidance for families to create healthy eating habits together.
             </p>
+            <Link
+              href="/services/family-nutrition"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
             <img
@@ -79,6 +104,12 @@ export default function Services() {
             <p className="text-pink-800 text-center">
               Performance-focused plans for athletes and active individuals.
             </p>
+            <Link
+              href="/services/sports-nutrition"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
           <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
             <img
@@ -93,6 +124,12 @@ export default function Services() {
               Expert advice and answers to your nutrition questions in a private
               session.
             </p>
+            <Link
+              href="/services/consultations"
+              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+            >
+              Book Now
+            </Link>
           </div>
         </div>
         <div className="mt-24" />
