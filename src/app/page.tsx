@@ -135,11 +135,7 @@ export default function Home() {
       style={{ background: "var(--background)", padding: 0 }}
     >
       <HeroSlides slides={SLIDES} />
-      <header className="site-header">
-        <p className="site-subtitle">
-          Empowering you to live your healthiest life
-        </p>
-      </header>
+      <div className="mb-16"></div>
       <main className="site-main">
         <IntroSection />
         <ServicesSection />

@@ -30,6 +30,17 @@ const Footer = () => {
         </nav>
         <div className="flex justify-center gap-6 mt-4">
           <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            className="hover:text-pink-500"
+          >
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.004 2.003h2.997c.001 2.073 1.682 3.757 3.755 3.757v3.003c-.857.001-1.693-.163-2.482-.484v7.721c0 2.761-2.24 5.001-5.001 5.001s-5.001-2.24-5.001-5.001c0-2.761 2.24-5.001 5.001-5.001.169 0 .336.009.501.025v3.032a2.001 2.001 0 1 0 1.999 1.999V2.003z" />
+            </svg>
+          </a>
+          <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
