@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const FAKE_POSTS = [
   {
@@ -49,7 +50,8 @@ export async function generateStaticParams() {
   return FAKE_POSTS.map((post) => ({ slug: post.slug }));
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default function BlogPost(props: { params: { slug: string } }) {
+  const { params } = props;
   const post = FAKE_POSTS.find((p) => p.slug === params.slug);
   if (!post) {
     return (
@@ -70,11 +72,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <div className="min-h-screen bg-pink-50 flex flex-col">
       <div className="flex-grow flex flex-col items-center p-8">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-64 h-64 rounded-3xl object-cover shadow-lg mb-6"
-        />
+        <div className="w-64 h-64 relative rounded-3xl overflow-hidden shadow-lg mb-6">
+          <Image src={post.image} alt={post.title} fill className="object-cover" />
+        </div>
         <h1 className="text-4xl font-extrabold text-pink-700 mb-2 text-center">
           {post.title}
         </h1>
