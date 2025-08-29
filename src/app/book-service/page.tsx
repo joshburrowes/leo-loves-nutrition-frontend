@@ -10,7 +10,7 @@ export default function BookService() {
         </h1>
         <p className="max-w-xl text-center text-pink-800 text-lg mb-8">
           Choose your service and book a session with Leo. Fill out the form
-          below and we'll get back to you to confirm your booking!
+          below and we&apos;ll get back to you to confirm your booking!
         </p>
         <form className="bg-white rounded-2xl shadow-md p-8 w-full max-w-lg flex flex-col gap-6">
           <div>

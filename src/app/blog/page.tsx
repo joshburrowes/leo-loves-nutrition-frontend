@@ -61,12 +61,12 @@ export default function Blog() {
     <div className="min-h-screen bg-pink-50 flex flex-col">
       <div className="flex-grow flex flex-col items-center p-8">
         <h1 className="text-5xl font-extrabold text-pink-700 mb-4 tracking-tight">
-          Leo's Nutrition Blog
+          Leo&apos;s Nutrition Blog
         </h1>
         <p className="max-w-xl text-center text-pink-800 text-lg mb-8">
-          Welcome to Leo's blog! Here you'll find nutrition tips, healthy
-          recipes, and inspiration for your wellness journey. Check back often
-          for new posts.
+          Welcome to Leo&apos;s blog! Here you&apos;ll find nutrition tips,
+          healthy recipes, and inspiration for your wellness journey. Check back
+          often for new posts.
         </p>
 
         {/* Featured Post */}

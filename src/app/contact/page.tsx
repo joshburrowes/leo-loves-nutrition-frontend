@@ -8,8 +8,8 @@ export default function Contact() {
         <h1 className="text-4xl font-bold text-pink-700 mb-4">Contact Leo</h1>
         <p className="max-w-xl text-center text-pink-800 text-lg">
           Get in touch with Leo for personalized nutrition advice,
-          consultations, or any questions you may have. We're here to help you
-          on your wellness journey.
+          consultations, or any questions you may have. We&apos;re here to help
+          you on your wellness journey.
         </p>
         <div className="mt-16" />
         <form className="bg-white rounded-lg shadow p-8 w-full max-w-md flex flex-col gap-4">

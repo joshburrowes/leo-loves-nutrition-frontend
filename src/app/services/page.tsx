@@ -13,7 +13,8 @@ export default function Services() {
           health goals.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 1 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80"
               alt="Personalized Nutrition Plans"
@@ -26,14 +27,16 @@ export default function Services() {
               Custom meal plans tailored to your unique needs, preferences, and
               goals.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/personalized-nutrition-plans"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 2 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=200&q=80"
               alt="1-on-1 Coaching"
@@ -46,14 +49,16 @@ export default function Services() {
               Ongoing support, motivation, and accountability from Leo every
               step of the way.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/1-on-1-coaching"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 3 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80"
               alt="Workshops & Seminars"
@@ -66,14 +71,16 @@ export default function Services() {
               Interactive group sessions covering nutrition, wellness, and
               healthy habits.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/workshops-seminars"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 4 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=200&q=80"
               alt="Family Nutrition"
@@ -85,14 +92,16 @@ export default function Services() {
             <p className="text-pink-800 text-center">
               Guidance for families to create healthy eating habits together.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/family-nutrition"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 5 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=200&q=80"
               alt="Sports Nutrition"
@@ -104,14 +113,16 @@ export default function Services() {
             <p className="text-pink-800 text-center">
               Performance-focused plans for athletes and active individuals.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/sports-nutrition"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center">
+          {/* Card 6 */}
+          <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center h-full min-h-[400px]">
             <img
               src="https://images.unsplash.com/photo-1464998857633-50e0ffcfc8a0?auto=format&fit=crop&w=200&q=80"
               alt="Consultations"
@@ -124,9 +135,10 @@ export default function Services() {
               Expert advice and answers to your nutrition questions in a private
               session.
             </p>
+            <div className="flex-grow" />
             <Link
               href="/services/consultations"
-              className="mt-4 text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
+              className="text-pink-600 hover:text-pink-900 font-semibold text-sm px-4 py-2 rounded-full bg-pink-50 shadow text-center w-full"
             >
               Book Now
             </Link>

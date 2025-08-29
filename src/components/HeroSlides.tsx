@@ -35,6 +35,20 @@ const HeroSlides: React.FC<HeroSlidesProps> = ({ slides }) => {
     };
   }, [slides.length, current]);
 
+  // Arrow navigation handlers
+  const goToPrev = () => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    setProgress(0);
+  };
+  const goToNext = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+    setProgress(0);
+  };
+  const goToSlide = (idx: number) => {
+    setCurrent(idx);
+    setProgress(0);
+  };
+
   return (
     <section
       className="hero-section"
@@ -114,62 +128,143 @@ const HeroSlides: React.FC<HeroSlidesProps> = ({ slides }) => {
         </div>
       ))}
       {/* Slide Dots */}
+      {/* Arrows and Slide Dots */}
+      {/* Left Arrow */}
+      <button
+        onClick={goToPrev}
+        aria-label="Previous Slide"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: 24,
+          transform: "translateY(-50%)",
+          background: "rgba(255,255,255,0.35)",
+          border: "none",
+          borderRadius: "50%",
+          width: 32,
+          height: 32,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: 0.5,
+          cursor: "pointer",
+          zIndex: 2,
+          transition: "opacity 0.2s",
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.5")}
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M15 19l-7-7 7-7"
+            stroke="#d72660"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      {/* Slide Dots */}
       <div
         style={{
           position: "absolute",
-          bottom: 24,
+          bottom: 16,
           right: 32,
           display: "flex",
-          justifyContent: "flex-end",
           alignItems: "center",
-          gap: 12,
+          gap: 10,
           zIndex: 2,
+          opacity: 0.7,
         }}
       >
-        {slides.map((_, idx) =>
-          idx === current ? (
-            <div
-              key={idx}
-              style={{
-                width: 64,
-                height: 12,
-                borderRadius: 6,
-                background: "#d72660",
-                boxShadow: "0 2px 8px #d72660",
-                overflow: "hidden",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
+        <div style={{ display: "flex", gap: 12 }}>
+          {slides.map((_, idx) =>
+            idx === current ? (
               <div
+                key={idx}
+                onClick={() => goToSlide(idx)}
                 style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  height: "100%",
-                  width: `${(progress / SLIDE_DURATION) * 100}%`,
-                  background: "#fff",
-                  borderRadius: 6,
-                  transition: "width 0.1s linear",
+                  width: 36,
+                  height: 8,
+                  borderRadius: 4,
+                  background: "#d72660",
+                  boxShadow: "0 1px 4px #d72660",
+                  overflow: "hidden",
+                  position: "relative",
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  opacity: 0.85,
                 }}
+                aria-label={`Go to slide ${idx + 1}`}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    height: "100%",
+                    width: `${(progress / SLIDE_DURATION) * 100}%`,
+                    background: "#fff",
+                    borderRadius: 4,
+                    transition: "width 0.1s linear",
+                  }}
+                />
+              </div>
+            ) : (
+              <div
+                key={idx}
+                onClick={() => goToSlide(idx)}
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: "50%",
+                  background: "#fff",
+                  boxShadow: "0 1px 4px #d72660",
+                  opacity: 0.4,
+                  cursor: "pointer",
+                }}
+                aria-label={`Go to slide ${idx + 1}`}
               />
-            </div>
-          ) : (
-            <div
-              key={idx}
-              style={{
-                width: 12,
-                height: 12,
-                borderRadius: "50%",
-                background: "#fff",
-                boxShadow: "0 2px 8px #d72660",
-                opacity: 0.5,
-              }}
-            />
-          )
-        )}
+            )
+          )}
+        </div>
       </div>
+      {/* Right Arrow */}
+      <button
+        onClick={goToNext}
+        aria-label="Next Slide"
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: 24,
+          transform: "translateY(-50%)",
+          background: "rgba(255,255,255,0.35)",
+          border: "none",
+          borderRadius: "50%",
+          width: 32,
+          height: 32,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: 0.5,
+          cursor: "pointer",
+          zIndex: 2,
+          transition: "opacity 0.2s",
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.5")}
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M9 5l7 7-7 7"
+            stroke="#d72660"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
     </section>
   );
 };
